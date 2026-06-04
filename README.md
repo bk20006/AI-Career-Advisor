@@ -25,8 +25,7 @@ An AI-powered career recommendation system built using:
 
 ## Live Demo
 
-https://YOUR-STREAMLIT-URL.streamlit.app
-
+[AI Career Advisor](https://ai-career-advisor-zg6utnaftb95tkahb4ilow.streamlit.app/)
 ## How It Works
 
 1. User enters interests.
