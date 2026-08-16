@@ -1,0 +1,810 @@
+[
+  {
+  "career": "AI Engineer",
+  "description": "Builds practical artificial intelligence applications by combining machine learning, deep learning, neural networks, and AI models into software products. AI Engineers focus on turning AI capabilities into usable intelligent applications.",
+  "skills": [
+    "Python",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "AI Application Development",
+    "Model Integration"
+  ],
+  "roadmap": [
+    "Python",
+    "Programming and Data Structures",
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "AI Application Development",
+    "Model Deployment"
+  ],
+  "tools": [
+    "PyTorch",
+    "TensorFlow",
+    "Hugging Face",
+    "OpenCV",
+    "Git",
+    "Docker"
+  ],
+  "projects": [
+    "AI Recommendation System",
+    "Image Classification Application",
+    "Intelligent Chatbot",
+    "AI-Based Prediction System"
+  ],
+  "certifications": [
+    "Google Professional Machine Learning Engineer",
+    "Microsoft Azure AI Engineer Associate"
+  ]
+},
+  {
+  "career": "Machine Learning Engineer",
+  "description": "Develops machine learning models by preparing data, selecting algorithms, training models, evaluating performance, tuning parameters, and deploying predictive systems. The role focuses strongly on the complete machine learning model development lifecycle.",
+  "skills": [
+    "Python",
+    "Statistics",
+    "Machine Learning Algorithms",
+    "Feature Engineering",
+    "Data Preprocessing",
+    "Model Training",
+    "Model Evaluation",
+    "Hyperparameter Tuning"
+  ],
+  "roadmap": [
+    "Python",
+    "Statistics",
+    "NumPy and Pandas",
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Feature Engineering",
+    "Model Evaluation",
+    "Model Deployment"
+  ],
+  "tools": [
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "PyTorch",
+    "TensorFlow",
+    "Jupyter"
+  ],
+  "projects": [
+    "Customer Churn Prediction",
+    "House Price Prediction",
+    "Fraud Detection Model",
+    "Recommendation System"
+  ],
+  "certifications": [
+    "Google Professional Machine Learning Engineer",
+    "AWS Certified Machine Learning Engineer"
+  ]
+},
+  {
+  "career": "Data Scientist",
+  "description": "Uses statistics, data analysis, experimentation, and machine learning to discover patterns in data and build predictive models that support business and technical decisions.",
+  "skills": [
+    "Python",
+    "Statistics",
+    "Probability",
+    "SQL",
+    "Data Analysis",
+    "Machine Learning",
+    "Feature Engineering",
+    "Data Visualization"
+  ],
+  "roadmap": [
+    "Python",
+    "Statistics and Probability",
+    "SQL",
+    "Pandas and NumPy",
+    "Data Visualization",
+    "Machine Learning",
+    "Model Evaluation",
+    "Applied Data Science"
+  ],
+  "tools": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "Jupyter",
+    "Power BI",
+    "Matplotlib"
+  ],
+  "projects": [
+    "Customer Churn Prediction",
+    "Sales Forecasting",
+    "Customer Segmentation",
+    "Sentiment Analysis"
+  ],
+  "certifications": [
+    "IBM Data Science Professional Certificate",
+    "Google Advanced Data Analytics"
+  ]
+},
+  {
+  "career": "Data Analyst",
+  "description": "Examines existing business and operational data to identify trends, answer business questions, create reports, and communicate insights through dashboards and visualizations. The role focuses primarily on analysis and reporting rather than developing complex machine learning models.",
+  "skills": [
+    "SQL",
+    "Excel",
+    "Data Cleaning",
+    "Data Analysis",
+    "Statistics",
+    "Data Visualization",
+    "Reporting",
+    "Business Analysis"
+  ],
+  "roadmap": [
+    "Excel",
+    "SQL",
+    "Statistics",
+    "Data Cleaning",
+    "Exploratory Data Analysis",
+    "Data Visualization",
+    "Business Intelligence"
+  ],
+  "tools": [
+    "Excel",
+    "SQL",
+    "Power BI",
+    "Tableau",
+    "Python",
+    "Pandas"
+  ],
+  "projects": [
+    "Sales Performance Dashboard",
+    "Customer Analysis",
+    "Financial Reporting Dashboard",
+    "Business KPI Dashboard"
+  ],
+  "certifications": [
+    "Google Data Analytics Professional Certificate",
+    "Microsoft Power BI Data Analyst"
+  ]
+},
+  {
+  "career": "Data Engineer",
+  "description": "Builds and maintains the infrastructure required to collect, transform, process, and store large amounts of data. Data Engineers focus on reliable data pipelines, data warehouses, distributed processing, and making data available for analysts and data scientists.",
+  "skills": [
+    "Python",
+    "SQL",
+    "Database Systems",
+    "ETL",
+    "Data Pipelines",
+    "Data Warehousing",
+    "Big Data",
+    "Cloud Computing"
+  ],
+  "roadmap": [
+    "Python",
+    "SQL",
+    "Database Fundamentals",
+    "ETL",
+    "Data Pipelines",
+    "Data Warehousing",
+    "Apache Spark",
+    "Cloud Data Platforms"
+  ],
+  "tools": [
+    "Python",
+    "SQL",
+    "Apache Spark",
+    "Apache Airflow",
+    "AWS",
+    "PostgreSQL",
+    "Snowflake"
+  ],
+  "projects": [
+    "ETL Data Pipeline",
+    "Real-Time Data Pipeline",
+    "Cloud Data Warehouse",
+    "Data Lake Architecture"
+  ],
+  "certifications": [
+    "AWS Certified Data Engineer",
+    "Google Cloud Professional Data Engineer"
+  ]
+},
+  {
+  "career": "Generative AI Engineer",
+  "description": "Builds applications powered by large language models and generative AI. Generative AI Engineers work with LLMs, retrieval augmented generation, prompt engineering, vector databases, AI agents, and foundation models to create applications that generate or understand text and other content.",
+  "skills": [
+    "Python",
+    "Large Language Models",
+    "Generative AI",
+    "Prompt Engineering",
+    "RAG",
+    "Vector Databases",
+    "AI Agents",
+    "Embeddings"
+  ],
+  "roadmap": [
+    "Python",
+    "Machine Learning Fundamentals",
+    "Deep Learning",
+    "Transformers",
+    "Large Language Models",
+    "Prompt Engineering",
+    "RAG",
+    "AI Agents"
+  ],
+  "tools": [
+    "Gemini API",
+    "OpenAI API",
+    "Hugging Face",
+    "LangChain",
+    "ChromaDB",
+    "FAISS"
+  ],
+  "projects": [
+    "RAG Question Answering System",
+    "AI Career Advisor",
+    "Document Chatbot",
+    "AI Agent System"
+  ],
+  "certifications": [
+    "Google Cloud Generative AI",
+    "Generative AI Professional Certification"
+  ]
+},
+  {
+  "career": "NLP Engineer",
+  "description": "Develops software systems that process and understand human language. NLP Engineers work on text classification, sentiment analysis, information extraction, language understanding, speech and text processing, and transformer-based language models.",
+  "skills": [
+    "Natural Language Processing",
+    "Python",
+    "Machine Learning",
+    "Deep Learning",
+    "Text Processing",
+    "Transformers",
+    "Text Classification",
+    "Language Models"
+  ],
+  "roadmap": [
+    "Python",
+    "Probability and Statistics",
+    "Machine Learning",
+    "Natural Language Processing",
+    "Text Representation",
+    "Deep Learning",
+    "Transformers",
+    "Large Language Models"
+  ],
+  "tools": [
+    "Hugging Face",
+    "NLTK",
+    "spaCy",
+    "PyTorch",
+    "TensorFlow",
+    "Transformers"
+  ],
+  "projects": [
+    "Sentiment Analysis System",
+    "News Text Classification",
+    "Named Entity Recognition",
+    "Question Answering System"
+  ],
+  "certifications": [
+    "DeepLearning.AI NLP Specialization",
+    "Hugging Face NLP Course"
+  ]
+},
+  {
+  "career": "Computer Vision Engineer",
+  "description": "Develops systems that allow computers to interpret and understand images and video. Computer Vision Engineers work on object detection, image classification, facial recognition, image segmentation, video analysis, and visual AI applications.",
+  "skills": [
+    "Computer Vision",
+    "Python",
+    "Image Processing",
+    "Deep Learning",
+    "Convolutional Neural Networks",
+    "Object Detection",
+    "Image Classification",
+    "Video Processing"
+  ],
+  "roadmap": [
+    "Python",
+    "Linear Algebra",
+    "Image Processing",
+    "Machine Learning",
+    "Convolutional Neural Networks",
+    "Object Detection",
+    "Image Segmentation",
+    "Computer Vision"
+  ],
+  "tools": [
+    "OpenCV",
+    "PyTorch",
+    "TensorFlow",
+    "YOLO",
+    "Pillow",
+    "CUDA"
+  ],
+  "projects": [
+    "Face Emotion Detection",
+    "Object Detection System",
+    "Face Recognition Application",
+    "Real-Time Video Analysis"
+  ],
+  "certifications": [
+    "DeepLearning.AI Computer Vision",
+    "Computer Vision Specialization"
+  ]
+},
+  {
+  "career": "MLOps Engineer",
+  "description": "MLOps Engineers specialize in deploying, monitoring, scaling, and maintaining machine learning models in production. They bridge machine learning development and software infrastructure by building reliable ML pipelines and automated model delivery systems.",
+  "skills": [
+    "Machine Learning Deployment",
+    "ML Pipelines",
+    "Model Monitoring",
+    "CI/CD",
+    "Docker",
+    "Kubernetes",
+    "Cloud Computing",
+    "Python",
+    "Infrastructure Automation"
+  ],
+  "roadmap": [
+    "Python",
+    "Machine Learning Fundamentals",
+    "Git and CI/CD",
+    "Docker",
+    "Cloud Computing",
+    "ML Pipelines",
+    "Kubernetes",
+    "Model Monitoring",
+    "MLOps"
+  ],
+  "tools": [
+    "MLflow",
+    "Docker",
+    "Kubernetes",
+    "GitHub Actions",
+    "Jenkins",
+    "AWS",
+    "Azure",
+    "Terraform"
+  ],
+  "projects": [
+    "Machine Learning Model Deployment Pipeline",
+    "Automated ML Training Pipeline",
+    "Model Monitoring System",
+    "Containerized ML API"
+  ],
+  "certifications": [
+    "AWS Certified Machine Learning Engineer",
+    "Google Cloud Professional Machine Learning Engineer"
+  ]
+},
+  {
+  "career": "Software Engineer",
+  "description": "Designs, develops, tests, and maintains software systems using software engineering principles. Software Engineers focus on programming fundamentals, algorithms, object-oriented design, system architecture, testing, and maintainable software development.",
+  "skills": [
+    "Java",
+    "Python",
+    "Data Structures",
+    "Algorithms",
+    "Object-Oriented Programming",
+    "Software Design",
+    "System Design",
+    "Testing"
+  ],
+  "roadmap": [
+    "Programming Fundamentals",
+    "Object-Oriented Programming",
+    "Data Structures",
+    "Algorithms",
+    "Databases",
+    "Software Engineering",
+    "System Design",
+    "Testing"
+  ],
+  "tools": [
+    "Git",
+    "GitHub",
+    "VS Code",
+    "IntelliJ IDEA",
+    "Docker"
+  ],
+  "projects": [
+    "Library Management System",
+    "Task Management Application",
+    "REST API",
+    "Desktop Application"
+  ],
+  "certifications": [
+    "Oracle Java Certification",
+    "Microsoft Azure Fundamentals"
+  ]
+},
+  {
+  "career": "Backend Developer",
+  "description": "Develops the server-side part of applications, including APIs, business logic, authentication, databases, and server communication. Backend Developers focus on making applications reliable, secure, and capable of processing requests and managing data.",
+  "skills": [
+    "Java",
+    "Python",
+    "SQL",
+    "REST APIs",
+    "Backend Frameworks",
+    "Databases",
+    "Authentication",
+    "Server-Side Programming"
+  ],
+  "roadmap": [
+    "Programming",
+    "Object-Oriented Programming",
+    "SQL",
+    "HTTP and REST",
+    "Backend Framework",
+    "Authentication",
+    "Databases",
+    "API Deployment"
+  ],
+  "tools": [
+    "Spring Boot",
+    "Node.js",
+    "Express",
+    "Django",
+    "PostgreSQL",
+    "MySQL",
+    "Postman"
+  ],
+  "projects": [
+    "REST API",
+    "Authentication Service",
+    "E-Commerce Backend",
+    "Student Management API"
+  ],
+  "certifications": [
+    "Oracle Java Certification",
+    "AWS Cloud Practitioner"
+  ]
+},
+  {
+  "career": "Full Stack Developer",
+  "description": "Builds complete web applications across both the frontend and backend. Full Stack Developers create user interfaces, connect them to server-side APIs, manage databases, implement authentication, and deploy complete web applications.",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "REST APIs",
+    "SQL",
+    "Web Development"
+  ],
+  "roadmap": [
+    "HTML and CSS",
+    "JavaScript",
+    "Frontend Framework",
+    "REST APIs",
+    "Backend Development",
+    "Databases",
+    "Authentication",
+    "Web Deployment"
+  ],
+  "tools": [
+    "React",
+    "JavaScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "PostgreSQL",
+    "Git"
+  ],
+  "projects": [
+    "E-Commerce Website",
+    "Social Media Application",
+    "Task Management Web App",
+    "Full Stack Portfolio"
+  ],
+  "certifications": [
+    "Meta Full Stack Developer",
+    "Meta Front-End Developer"
+  ]
+},
+  {
+  "career": "Cloud Engineer",
+  "description": "Cloud Engineers design, deploy, configure, and maintain cloud infrastructure and services. They work with compute, storage, networking, security, identity, databases, and scalable cloud architectures. The role focuses on managing reliable cloud environments rather than developing machine learning models.",
+  "skills": [
+    "Cloud Infrastructure",
+    "AWS",
+    "Azure",
+    "Linux",
+    "Computer Networking",
+    "Virtual Machines",
+    "Cloud Storage",
+    "Identity and Access Management",
+    "Cloud Security",
+    "Infrastructure as Code"
+  ],
+  "roadmap": [
+    "Linux",
+    "Computer Networking",
+    "Cloud Fundamentals",
+    "AWS or Azure",
+    "Cloud Networking",
+    "Cloud Security",
+    "Infrastructure as Code",
+    "Cloud Architecture"
+  ],
+  "tools": [
+    "AWS",
+    "Microsoft Azure",
+    "Google Cloud",
+    "Terraform",
+    "Linux",
+    "Docker",
+    "AWS CLI"
+  ],
+  "projects": [
+    "Deploy a Web Application on AWS",
+    "Cloud Infrastructure using Terraform",
+    "AWS VPC Network Architecture",
+    "Cloud Storage and Backup System"
+  ],
+  "certifications": [
+    "AWS Certified Cloud Practitioner",
+    "AWS Certified Solutions Architect",
+    "Microsoft Azure Fundamentals"
+  ]
+},
+  {
+    "career": "DevOps Engineer",
+    "description": "Automates software development, testing, deployment, and infrastructure management using DevOps practices and tools.",
+    "skills": ["Linux", "Git", "CI/CD", "Docker", "Kubernetes", "Cloud"],
+    "roadmap": ["Linux", "Git", "Networking", "CI/CD", "Docker", "Kubernetes", "Cloud"],
+    "tools": ["GitHub Actions", "Jenkins", "Docker", "Kubernetes", "AWS"],
+    "projects": ["CI/CD Pipeline", "Containerized Application", "Automated Deployment System"],
+    "certifications": ["AWS DevOps Engineer", "Docker Certified Associate"]
+  },
+  {
+  "career": "Cybersecurity Engineer",
+  "description": "Protects computers, networks, applications, and data from cyber threats. Cybersecurity Engineers design security controls, analyze vulnerabilities, monitor attacks, secure infrastructure, and respond to security incidents.",
+  "skills": [
+    "Cybersecurity",
+    "Computer Networking",
+    "Linux",
+    "Network Security",
+    "Cryptography",
+    "Vulnerability Assessment",
+    "Security Monitoring",
+    "Ethical Hacking"
+  ],
+  "roadmap": [
+    "Networking Fundamentals",
+    "Linux",
+    "Cybersecurity Fundamentals",
+    "Network Security",
+    "Cryptography",
+    "Ethical Hacking",
+    "Security Monitoring",
+    "Incident Response"
+  ],
+  "tools": [
+    "Wireshark",
+    "Nmap",
+    "Burp Suite",
+    "Linux",
+    "Metasploit",
+    "SIEM Tools"
+  ],
+  "projects": [
+    "Network Intrusion Detection System",
+    "Vulnerability Scanner",
+    "Security Monitoring Dashboard",
+    "Web Application Security Testing"
+  ],
+  "certifications": [
+    "CompTIA Security+",
+    "Cisco Cybersecurity",
+    "Certified Ethical Hacker"
+  ]
+},
+{
+  "career": "Network Engineer",
+  "description": "Designs, configures, maintains, and troubleshoots computer networks. Network Engineers focus on routers, switches, IP addressing, routing protocols, network infrastructure, connectivity, and network performance.",
+  "skills": [
+    "Computer Networking",
+    "TCP/IP",
+    "Routing",
+    "Switching",
+    "IP Addressing",
+    "Network Troubleshooting",
+    "Network Security",
+    "Linux"
+  ],
+  "roadmap": [
+    "Networking Fundamentals",
+    "OSI and TCP/IP Models",
+    "IP Addressing",
+    "Routing",
+    "Switching",
+    "Routing Protocols",
+    "Network Security",
+    "Network Troubleshooting"
+  ],
+  "tools": [
+    "Cisco Packet Tracer",
+    "Cisco IOS",
+    "Wireshark",
+    "GNS3",
+    "Linux"
+  ],
+  "projects": [
+    "Enterprise Network Design",
+    "Campus Network Simulation",
+    "Network Monitoring System",
+    "Routing and Switching Laboratory"
+  ],
+  "certifications": [
+    "Cisco CCNA",
+    "CompTIA Network+"
+  ]
+},
+  {
+  "career": "Database Administrator",
+  "description": "Manages and maintains database systems to ensure data is secure, available, consistent, backed up, and performing efficiently. Database Administrators focus on database configuration, access control, backup and recovery, monitoring, and performance optimization.",
+  "skills": [
+    "SQL",
+    "Database Management",
+    "Database Security",
+    "Backup and Recovery",
+    "Performance Tuning",
+    "Database Administration",
+    "Data Security"
+  ],
+  "roadmap": [
+    "SQL",
+    "Database Fundamentals",
+    "Relational Databases",
+    "Database Administration",
+    "Backup and Recovery",
+    "Database Security",
+    "Performance Tuning"
+  ],
+  "tools": [
+    "MySQL",
+    "PostgreSQL",
+    "Oracle Database",
+    "SQL Server",
+    "Linux"
+  ],
+  "projects": [
+    "Database Management System",
+    "Automated Database Backup System",
+    "Database Performance Monitoring",
+    "Database Security Implementation"
+  ],
+  "certifications": [
+    "Oracle Database Certification",
+    "Microsoft Azure Database Administrator"
+  ]
+},
+{
+  "career": "QA and Automation Engineer",
+  "description": "Ensures software quality by designing test cases, identifying defects, automating repetitive tests, and validating application functionality. QA Automation Engineers focus on test automation, regression testing, API testing, and integrating tests into software delivery pipelines.",
+  "skills": [
+    "Software Testing",
+    "Test Automation",
+    "Test Case Design",
+    "Selenium",
+    "API Testing",
+    "Java",
+    "Python",
+    "Regression Testing"
+  ],
+  "roadmap": [
+    "Software Testing Fundamentals",
+    "Manual Testing",
+    "Test Case Design",
+    "Automation Testing",
+    "Selenium",
+    "API Testing",
+    "CI/CD Testing"
+  ],
+  "tools": [
+    "Selenium",
+    "Postman",
+    "JUnit",
+    "PyTest",
+    "Jenkins",
+    "Git"
+  ],
+  "projects": [
+    "Automated Web Testing Framework",
+    "API Testing Framework",
+    "Regression Testing Suite",
+    "Automated CI Testing Pipeline"
+  ],
+  "certifications": [
+    "ISTQB Foundation Level",
+    "Selenium Certification"
+  ]
+},
+  {
+  "career": "Mobile App Developer",
+  "description": "Designs and develops applications specifically for mobile devices such as Android and iOS. Mobile App Developers focus on mobile user interfaces, application logic, APIs, local storage, device features, testing, and app deployment.",
+  "skills": [
+    "Mobile Application Development",
+    "Java",
+    "Kotlin",
+    "Dart",
+    "Flutter",
+    "Android Development",
+    "UI Development",
+    "REST APIs"
+  ],
+  "roadmap": [
+    "Programming Fundamentals",
+    "Mobile Development Basics",
+    "Android or Flutter",
+    "User Interface Development",
+    "REST APIs",
+    "Local Databases",
+    "Testing",
+    "App Deployment"
+  ],
+  "tools": [
+    "Android Studio",
+    "Flutter",
+    "Firebase",
+    "Android SDK",
+    "Git"
+  ],
+  "projects": [
+    "Expense Tracker App",
+    "Weather Application",
+    "College Management App",
+    "Mobile E-Commerce Application"
+  ],
+  "certifications": [
+    "Google Associate Android Developer",
+    "Flutter Certification"
+  ]
+},
+{
+  "career": "Business Intelligence Analyst",
+  "description": "Transforms business data into dashboards, reports, metrics, and insights that help organizations understand performance and make informed decisions. BI Analysts focus on reporting, business metrics, visualization, and communicating data-driven findings.",
+  "skills": [
+    "SQL",
+    "Business Intelligence",
+    "Data Analysis",
+    "Data Visualization",
+    "Excel",
+    "Power BI",
+    "Business Metrics",
+    "Reporting"
+  ],
+  "roadmap": [
+    "Excel",
+    "SQL",
+    "Data Analysis",
+    "Business Metrics",
+    "Data Visualization",
+    "Power BI",
+    "Business Intelligence Reporting"
+  ],
+  "tools": [
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "SQL",
+    "Power Query"
+  ],
+  "projects": [
+    "Sales Performance Dashboard",
+    "Business KPI Dashboard",
+    "Financial Analytics Dashboard",
+    "Customer Insights Dashboard"
+  ],
+  "certifications": [
+    "Microsoft Power BI Data Analyst",
+    "Tableau Certification"
+  ]
+}
+]

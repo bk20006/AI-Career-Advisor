@@ -1,11 +1,17 @@
 from dotenv import load_dotenv
 import os
-import google.generativeai as genai
 
+import google.generativeai as genai
+import chromadb
+from sentence_transformers import SentenceTransformer
+import streamlit as st
+
+
+# Load environment variables
 load_dotenv()
 
-import os
 
+# Configure Gemini
 genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )
@@ -13,15 +19,68 @@ genai.configure(
 model = genai.GenerativeModel(
     "gemini-2.5-flash"
 )
-import chromadb
-from sentence_transformers import SentenceTransformer
-import streamlit as st
-client = chromadb.Client()
+def critic_agent(user_query, careers):
 
-collection = client.get_or_create_collection(
+    prompt = f"""
+You are a career recommendation critic.
+
+Student's interests:
+{user_query}
+
+Candidate careers:
+{careers}
+
+Rank the candidate careers from most suitable to least suitable.
+
+Consider:
+- Skills mentioned by the student
+- Career responsibilities
+- Student's explicit preferences
+- Things the student explicitly does NOT want
+- Overall career fit
+
+Return ONLY the career names in ranked order.
+Do not add explanations.
+
+Example:
+Cloud Engineer
+Network Engineer
+MLOps Engineer
+"""
+
+    response = model.generate_content(prompt)
+
+    lines = response.text.strip().split("\n")
+
+    ranked = []
+
+    for line in lines:
+        line = line.strip()
+        line = line.lstrip("0123456789.-) ")
+
+        if line:
+            ranked.append(line)
+
+    return ranked
+
+
+# Load embedding model
+embedding_model = SentenceTransformer(
+    "all-MiniLM-L6-v2"
+)
+
+
+# Connect to persistent ChromaDB
+client = chromadb.PersistentClient(
+    path="./chroma_db"
+)
+
+collection = client.get_collection(
     name="careers"
 )
 
+
+# Streamlit UI
 st.title("🤖 AI Career Advisor")
 
 st.markdown("""
@@ -29,177 +88,120 @@ Get personalized career recommendations
 and ask AI-powered questions about your career path.
 """)
 
+
 user_input = st.text_area(
     "Tell me your interests"
 )
 
-career_names = [
-    "Data Science",
-    "AI Engineer",
-    "Cloud Engineer",
-    "Cybersecurity"
-]
 
-career_texts = [
-
-"""
-Data Science
-
-Skills:
-Python, Statistics, Data Analysis, SQL, Machine Learning
-
-Roadmap:
-Python -> Statistics -> Pandas -> Machine Learning
-
-Salary:
-6-18 LPA
-
-Courses:
-Andrew Ng Machine Learning
-Resources:
-Python:
-- Python for Everybody
-
-Statistics:
-- Khan Academy Statistics
-
-Machine Learning:
-- Andrew Ng ML Specialization
-""",
-
-"""
-AI Engineer
-
-Skills:
-Python, Machine Learning, Deep Learning, Neural Networks
-
-Roadmap:
-Python -> Machine Learning -> Deep Learning -> MLOps
-
-Resources:
-Python:
-- Python for Everybody
-
-Machine Learning:
-- Andrew Ng ML Specialization
-
-Deep Learning:
-- Deep Learning Specialization
-
-Salary:
-8-20 LPA
-""",
-
-"""
-Cloud Engineer
-
-Skills:
-Linux, Networking, AWS, Azure, Docker
-
-Roadmap:
-Linux -> Networking -> AWS -> DevOps
-
-Salary:
-6-18 LPA
-
-Courses:
-AWS Cloud Practitioner
-Resources:
-Linux:
-- Linux Journey
-
-AWS:
-- AWS Cloud Practitioner
-
-Docker:
-- Docker for Beginners
-""",
-
-"""
-Cybersecurity
-
-Skills:
-Networking, Cryptography, Ethical Hacking
-
-Roadmap:
-Networking -> Security -> Ethical Hacking
-
-Salary:
-5-15 LPA
-
-Courses:
-CompTIA Security+
-Resources:
-Networking:
-- Cisco Networking Basics
-
-Security:
-- CompTIA Security+
-
-Ethical Hacking:
-- TryHackMe
-- Hack The Box
-"""
-]
-if collection.count() == 0:
-    collection.add(
-        documents=career_texts,
-        ids=["1", "2", "3", "4"],
-        metadatas=[
-            {"career": "Data Science"},
-            {"career": "AI Engineer"},
-            {"career": "Cloud Engineer"},
-            {"career": "Cybersecurity"}
-        ]
-    )
-
+# Recommend careers
 if st.button("Recommend"):
-    
-    results = collection.query(
-        query_texts=[user_input],
-        n_results=3
-    )
 
-    st.session_state["results"] = results
+    if user_input.strip():
+
+        # Convert user query into an embedding
+        query_embedding = embedding_model.encode(
+            user_input
+        ).tolist()
+
+        # Retrieve top 5 candidates from ChromaDB
+        results = collection.query(
+            query_embeddings=[query_embedding],
+            n_results=5
+        )
+
+        candidate_careers = []
+
+        for i in range(len(results["metadatas"][0])):
+            candidate_careers.append(
+                results["documents"][0][i]
+            )
+
+        # Critic agent reranks the candidates
+        ranked_careers = critic_agent(
+            user_input,
+            candidate_careers
+        )
+
+        st.session_state["results"] = results
+        st.session_state["ranked_careers"] = ranked_careers
+
+    else:
+        st.warning(
+            "Please enter your interests first."
+        )
+
+# Display recommendations
 if "results" in st.session_state:
 
     results = st.session_state["results"]
+    ranked_careers = st.session_state["ranked_careers"]
+
+    # Create a mapping between career name and its document
+    career_documents = {}
+
+    for i in range(len(results["metadatas"][0])):
+        career = results["metadatas"][0][i]["career"]
+        document = results["documents"][0][i]
+
+        career_documents[career] = document
 
     st.subheader("Top Career Recommendations")
 
-   
-    for i in range(len(results["metadatas"][0])):
+    # Display critic-ranked careers
+    for i, career in enumerate(ranked_careers[:3]):
 
-        career = results["metadatas"][0][i]["career"]
-        
-        st.success(
-            f"{i+1}. {career}"
-        )
+        # Find the matching career document
+        career = career.strip()
 
-        with st.expander("View Details"):
-            st.write(
-            results["documents"][0][i]
+        if career in career_documents:
+
+            st.success(
+                f"{i + 1}. {career}"
             )
 
-        st.divider()
-    
+            with st.expander("View Details"):
+                st.write(
+                    career_documents[career]
+                )
+
+            st.divider()
+
+
     st.subheader("Ask About Your Career")
+
+    # Only show careers that were actually ranked
+    available_careers = [
+        career
+        for career in ranked_careers[:3]
+        if career.strip() in career_documents
+    ]
+
     career_choice = st.selectbox(
-    "Choose a Career",
-    [item["career"] for item in results["metadatas"][0]],
-    key="career_choice"
+        "Choose a Career",
+        available_careers,
+        key="career_choice"
     )
+
 
     if st.button("Select Career"):
 
-        selected_index = [
-            item["career"]
-            for item in results["metadatas"][0]
-        ].index(career_choice)
+        selected_career = career_choice.strip()
 
-        st.session_state["career_doc"] = results["documents"][0][selected_index]
+        st.session_state["career_doc"] = (
+            career_documents[selected_career]
+        )
 
-        st.success(f"{career_choice} selected!")
+        st.session_state["selected_career"] = (
+            selected_career
+        )
+
+        st.success(
+            f"{selected_career} selected!"
+        )
+
+
+# Ask questions about selected career
 if "career_doc" in st.session_state:
 
     question = st.text_input(
@@ -208,32 +210,28 @@ if "career_doc" in st.session_state:
 
     if question:
 
-        career_doc = st.session_state.get(
-            "career_doc",
-            ""
-        )
-
-        
-        
+        career_doc = st.session_state[
+            "career_doc"
+        ]
 
         prompt = f"""
-        You are an expert career advisor.
+You are an expert career advisor.
 
-        Career Information:
-        {career_doc}
+Career Information:
+{career_doc}
 
-        Student Question:
-        {question}
+Student Question:
+{question}
 
-        Instructions:
-        - Give practical advice.
-        - Explain the reason.
-        - Suggest resources if available.
-        - Keep answers under 150 words.
-        - Use simple language.
+Instructions:
+- Give practical advice.
+- Explain the reason.
+- Suggest resources if available.
+- Keep answers under 150 words.
+- Use simple language.
 
-        Answer:
-        """
+Answer:
+"""
 
         response = model.generate_content(
             prompt
