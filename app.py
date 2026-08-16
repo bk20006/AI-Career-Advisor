@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import json
 
 import google.generativeai as genai
 import chromadb
@@ -70,14 +71,64 @@ embedding_model = SentenceTransformer(
 )
 
 
+# Load career knowledge base
+with open("career_data.json", "r", encoding="utf-8") as f:
+    career_data = json.load(f)
 # Connect to persistent ChromaDB
 client = chromadb.PersistentClient(
     path="./chroma_db"
 )
 
-collection = client.get_collection(
+collection = client.get_or_create_collection(
     name="careers"
 )
+
+# Build database automatically if it is empty
+if collection.count() == 0:
+
+    documents = []
+    embeddings = []
+    metadatas = []
+    ids = []
+
+    for i, career in enumerate(career_data):
+
+        document = f"""
+Career: {career["career"]}
+
+Description: {career["description"]}
+
+Skills: {", ".join(career["skills"])}
+
+Roadmap: {" -> ".join(career["roadmap"])}
+
+Tools: {", ".join(career["tools"])}
+
+Projects: {", ".join(career["projects"])}
+
+Certifications: {", ".join(career["certifications"])}
+"""
+
+        documents.append(document)
+
+        embedding = embedding_model.encode(
+            document
+        ).tolist()
+
+        embeddings.append(embedding)
+
+        metadatas.append({
+            "career": career["career"]
+        })
+
+        ids.append(str(i))
+
+    collection.add(
+        documents=documents,
+        embeddings=embeddings,
+        metadatas=metadatas,
+        ids=ids
+    )
 
 
 # Streamlit UI
