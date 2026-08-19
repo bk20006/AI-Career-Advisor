@@ -1,0 +1,213 @@
+/* ---------- Main Header ---------- */
+
+.main-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #a8a8a8;
+    margin-bottom: 28px;
+}
+
+
+/* ---------- Input ---------- */
+
+div[data-testid="stTextArea"] textarea {
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+
+/* ---------- Buttons ---------- */
+
+div.stButton > button {
+    border-radius: 10px;
+    font-weight: 600;
+    min-height: 42px;
+    transition: 0.2s;
+}
+
+div.stButton > button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Section Headings ---------- */
+
+.section-title {
+    font-size: 28px;
+    font-weight: 650;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- Recommendation Cards ---------- */
+
+.career-card {
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+}
+
+.career-card h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.career-card p {
+    margin-top: 7px;
+    color: #a8a8a8;
+}
+
+
+/* ---------- Expanders ---------- */
+
+div[data-testid="stExpander"] {
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+
+/* ---------- Select Box ---------- */
+
+div[data-baseweb="select"] > div {
+    border-radius: 10px;
+}
+
+
+/* ---------- Spinner ---------- */
+
+div[data-testid="stSpinner"] {
+    margin-top: 10px;
+}
+
+/* Career details */
+[data-testid="stExpander"] {
+    border-radius: 10px;
+    border: 1px solid #3a3a45;
+    margin-bottom: 18px;
+}
+
+/* Section spacing */
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Ask About Career */
+h2 {
+    margin-top: 35px;
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 600;
+}
+
+/* Text input and dropdown */
+[data-baseweb="select"] {
+    border-radius: 8px;
+}
+
+textarea {
+    border-radius: 10px !important;
+}
+
+/* ===== Career Recommendation Cards ===== */
+
+.career-card {
+    background: linear-gradient(135deg, #171a21, #20242d);
+    border: 1px solid #3b4252;
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin: 20px 0 8px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+}
+
+.career-card:hover {
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+.career-card h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.career-card p {
+    margin: 12px 0 0 0;
+    color: #aeb6c4;
+    font-size: 15px;
+}
+
+/* ===== FINAL UI POLISH ===== */
+
+.main-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #aeb6c4;
+    margin-bottom: 30px;
+}
+
+/* Section headings */
+.section-title {
+    font-size: 30px;
+    font-weight: 750;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* Primary buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 22px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+}
+
+/* Text area */
+textarea {
+    border-radius: 12px !important;
+    border: 1px solid #3b4252 !important;
+}
+
+/* Career cards */
+.career-card {
+    margin: 15px 0 8px 0;
+    padding: 20px 24px;
+    border-radius: 14px;
+}
+
+/* Career details */
+[data-testid="stExpander"] {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Select box */
+[data-baseweb="select"] {
+    border-radius: 9px;
+}
+
