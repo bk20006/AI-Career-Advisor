@@ -168,6 +168,7 @@ print("Generating embeddings...")
 
 embeddings = embedding_model.encode(
     documents,
+    batch_size=8,
     show_progress_bar=True
 ).tolist()
 
