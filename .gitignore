@@ -3,4 +3,3 @@ venv/
 __pycache__/
 chroma_db/
 onet_chroma_db/
-*.csv
