@@ -167,11 +167,26 @@ embedding_model = load_embedding_model()
 # Connect to NEW O*NET ChromaDB
 # --------------------------------------------------
 
+import subprocess
+import sys
+
+if not os.path.exists("./onet_chroma_db"):
+
+    with st.spinner("Building O*NET career database..."):
+
+        subprocess.run(
+            [sys.executable, "build_database.py"],
+            check=True
+        )
+
+
 @st.cache_resource
 def load_collection():
+
     client = chromadb.PersistentClient(
         path="./onet_chroma_db"
     )
+
     return client.get_collection(
         name="onet_careers"
     )
