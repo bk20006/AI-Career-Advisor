@@ -4,3 +4,4 @@ chromadb
 sentence-transformers
 python-dotenv
 pandas
+torchvision==0.29.0
